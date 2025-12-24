@@ -1,9 +1,9 @@
 // Set active link based on current page
 document.addEventListener('DOMContentLoaded', function() {
-    const currentPage = window.location.pathname.split('/').pop() || 'home.html';
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     
     const navLinks = {
-        'home.html': 0,
+        'index.html': 0,
         '': 0,
         'log-in.html': 1,
         'register.html': 2
@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const href = link.getAttribute('href');
         
         // Check if this link matches the current page
-        if (href === currentPage || (currentPage === '' && href === 'home.html')) {
+        if (href === currentPage || (currentPage === '' && href === 'index.html')) {
             // Find the parent div and add active class
             const parentDiv = link.querySelector('[class*="frame-2"], [class*="div"], [class*="div-wrapper"]');
             if (parentDiv) {
