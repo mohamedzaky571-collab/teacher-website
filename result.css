@@ -427,7 +427,7 @@
                 font-size: 14px;
             }
             .profile {
-                margin: 100px 15px 30px;
+                margin: 200px 15px 30px;
                 padding: 20px;
             }
             .profile-grid {
@@ -470,4 +470,5 @@
                 gap: 8px;
             }
         }
+
    
