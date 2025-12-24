@@ -1,0 +1,473 @@
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html, body {
+            height: 100%;
+            font-family: 'Cairo', sans-serif;
+            scroll-behavior: smooth;
+            direction: rtl;
+            text-align: right;
+            background-color: #f5f5f5;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+
+        /* Navigation Bar */
+        .macbook-pro .frame {
+            display: flex;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #ffffff;
+            padding: 14px 5%;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(3,120,216,0.06);
+        }
+
+        .macbook-pro .container {
+            display: flex;
+            max-width: 900px;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 6px;
+            background: linear-gradient(90deg,#007ee6,#0056b3);
+            border-radius: 40px;
+        }
+
+        .macbook-pro .div-wrapper,
+        .macbook-pro .div,
+        .macbook-pro .frame-2 {
+            display: flex;
+            height: 48px;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 6px 14px;
+            flex: 1;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: all 0.18s ease;
+            color: #fff;
+        }
+
+        .macbook-pro .div-wrapper:hover,
+        .macbook-pro .div:hover,
+        .macbook-pro .frame-2:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .macbook-pro .frame-2 {
+            background: transparent;
+            color: #fff;
+        }
+
+        .macbook-pro .frame-2.active-link {
+            background-color: #ffffff;
+            border: 2px solid #007ee6;
+            box-shadow: 0 0 8px rgba(0, 126, 230, 0.3);
+        }
+
+        .macbook-pro .div-wrapper.active-link,
+        .macbook-pro .div.active-link {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .macbook-pro .text-wrapper {
+            font-family: "Cairo", Helvetica;
+            font-weight: 400;
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 24px;
+            white-space: nowrap;
+        }
+
+        .macbook-pro .text-wrapper-2 {
+            font-family: "Cairo", Helvetica;
+            font-weight: 400;
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 24px;
+            white-space: nowrap;
+        }
+
+        .macbook-pro .image {
+            width: 78px;
+            height: 98px;
+            object-fit: cover;
+        }
+
+        /* Profile Section */
+        .profile {
+            background: #fff;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 164px auto 40px;
+            max-width: 720px;
+            box-shadow: 0 2px 8px rgba(0,0,0,.06);
+        }
+
+        .profile h3 {
+            font-size: 20px;
+            margin-bottom: 25px;
+            color: #141414;
+        }
+
+        .profile-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .profile-grid > div {
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 12px;
+
+        }
+
+        .profile-grid span {
+            font-size: 12px;
+            color: #777;
+        }
+
+        .profile-grid p {
+            margin: 8px 0 0;
+            font-size: 15px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .profile-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            margin-top: 30px;
+            gap: 20px;
+        }
+
+        .profile-stats div {
+            background: linear-gradient(135deg, #e8f5ff 0%, #d4ebff 100%);
+            text-align: center;
+            padding: 20px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 24px;
+            color: #0d6efd;
+            transition: transform 0.2s;
+        }
+
+        .profile-stats div:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(13,110,253,0.2);
+        }
+
+        .profile-stats span {
+            display: block;
+            font-size: 12px;
+            color: #555;
+        }
+
+        /* Cards Section */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto 60px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,.08);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, #0d6efd 0%, #0056b3 100%);
+            color: #fff;
+            padding: 20px;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .card-header .dates {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            margin-top: 12px;
+            gap: 10px;
+        }
+
+        .card-header .dates span {
+            padding: 6px 12px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .card-body {
+            padding: 25px 20px;
+        }
+
+        .card-body .stats {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-bottom: 20px;
+            gap: 15px;
+        }
+
+        .stats > div {
+            flex: 1;
+            padding: 15px 10px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .stats span {
+            display: block;
+            font-size: 12px;
+            color: #777;
+        }
+
+        .grades {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .grades p {
+            margin: 10px 0;
+            font-size: 15px;
+            padding: 8px;
+            background: white;
+            border-radius: 8px;
+        }
+
+        .final {
+            margin-top: 15px;
+            padding: 15px;
+            text-align: center;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .success-box {
+            background: #e8f5ff;
+            color: #0d6efd;
+        }
+
+        .absent {
+            background: #eee;
+            color: #999;
+        }
+
+        .fail {
+            background: #ffe5e5;
+            color: #d63333;
+        }
+
+        /* Card Footer */
+        .card-footer {
+            padding: 18px;
+            text-align: center;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .card-footer.yellow {
+            background: linear-gradient(135deg, #ffe6a7 0%, #ffd96b 100%);
+            color: #7d5e00;
+        }
+
+        .card-footer.red {
+            background: linear-gradient(135deg, #ffd6d6 0%, #ffb3b3 100%);
+            color: #b30000;
+        }
+
+        .card-footer.buttons {
+            display: flex;
+            gap: 12px;
+            background: #f8f9fa;
+        }
+
+        .btn {
+            font-family: 'Cairo';
+            flex: 1;
+            padding: 12px 20px;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn.blue {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0d6efd 0%, #0056b3 100%);
+            color: #fff;
+        }
+
+        .btn.blue:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(13,110,253,0.3);
+        }
+
+        .btn.outline {
+             display: flex;
+            align-items: center;
+            justify-content: center;
+    background: #ededed;
+    color: #2b2b2b;
+}
+
+        
+
+        /* Footer */
+        .footer {
+            display: flex;
+            flex-direction: column;
+            padding: 64px 5% 32px 5%;
+            background: linear-gradient(180deg, rgba(0, 82, 151, 1) 0%, rgba(0, 53, 97, 1) 100%);
+            color: #ffffff;
+            width: 100%;
+        }
+
+        .container-7 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 48px;
+            margin-bottom: 48px;
+        }
+
+        .text-wrapper-11 {
+            font-family: "Cairo", Helvetica;
+            font-weight: 400;
+            color: #d4d4d4;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .text-wrapper-12 {
+            font-family: "Cairo", Helvetica;
+            font-weight: 600;
+            color: #ffffff;
+            font-size: 16px;
+            margin-bottom: 16px;
+        }
+
+        .link {
+            color: #d4d4d4;
+            font-family: "Cairo", Helvetica;
+            font-size: 16px;
+            margin-bottom: 8px;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .link:hover {
+            color: #ffffff;
+        }
+
+        .element {
+            font-family: "Cairo", Helvetica;
+            font-weight: 400;
+            color: #99a1ae;
+            font-size: 14px;
+            text-align: center;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .dates h5{
+            margin-bottom: 8px;
+            font-size: 12px;
+            font-family: 400;
+            color: #ffffff;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .macbook-pro .image {
+                width: 60px;
+                height: 75px;
+            }
+            .macbook-pro .container {
+                padding: 6px;
+            }
+            .macbook-pro .div-wrapper,
+            .macbook-pro .div,
+            .macbook-pro .frame-2 {
+                height: 42px;
+                padding: 4px 8px;
+            }
+            .macbook-pro .text-wrapper,
+            .macbook-pro .text-wrapper-2 {
+                font-size: 14px;
+            }
+            .profile {
+                margin: 100px 15px 30px;
+                padding: 20px;
+            }
+            .profile-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            .profile-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .cards {
+                grid-template-columns: 1fr;
+                padding: 0 15px;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .macbook-pro .frame {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px;
+            }
+            .macbook-pro .container {
+                width: 100%;
+            }
+            .profile h3 {
+                font-size: 18px;
+            }
+            .profile-stats div {
+                font-size: 20px;
+                padding: 15px;
+            }
+            .card-header {
+                font-size: 14px;
+                padding: 15px;
+            }
+            .card-header .dates {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+   

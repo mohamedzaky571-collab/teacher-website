@@ -1,0 +1,244 @@
+
+        * {
+             box-sizing: border-box; margin: 0; padding: 0;
+             }
+        html, body {
+             height: 100%; font-family: 'Cairo', sans-serif; scroll-behavior: smooth; direction: rtl; text-align: right; background-color: #ffffff;
+             }
+         a { text-decoration: none;
+            color:white
+         }
+/* * Navigation Bar - Responsive (unified) */ 
+        .macbook-pro .frame {
+            display: flex;
+            position: fixed;
+            top: 0;
+            right: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: #ffffff;
+            padding: 14px 5%;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(3,120,216,0.06);
+        }
+
+        .macbook-pro .container {
+            display: flex;
+            max-width: 900px;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 6px;
+            background: linear-gradient(90deg,#007ee6,#0056b3);
+            border-radius: 40px;
+        }
+
+        .macbook-pro .div-wrapper,
+        .macbook-pro .div,
+        .macbook-pro .frame-2 {
+            display: flex;
+            height: 48px;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 6px 14px;
+            flex: 1;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: all 0.18s ease;
+            color: #fff;
+        }
+
+        .macbook-pro .div-wrapper:hover,
+        .macbook-pro .div:hover,
+        .macbook-pro .frame-2:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .macbook-pro .frame-2 {
+            background: transparent;
+            color: #fff;
+        }
+
+        .macbook-pro .frame-2.active-link {
+            background-color: #ffffff;
+            border: 2px solid #007ee6;
+            box-shadow: 0 0 8px rgba(0, 126, 230, 0.3);
+        }
+
+        .macbook-pro .div-wrapper.active-link,
+        .macbook-pro .div.active-link {
+            background-color: rgba(255, 255, 255, 0.3);
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .macbook-pro .text-wrapper {
+            font-family: "Cairo", Helvetica;
+            font-weight: 400;
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 24px;
+            white-space: nowrap;
+        }
+
+        .macbook-pro .text-wrapper-2 {
+            font-family: "Cairo", Helvetica;
+            font-weight: 400;
+            color: #ffffff;
+            font-size: 16px;
+            line-height: 24px;
+            white-space: nowrap;
+        }
+
+        .macbook-pro .image {
+            width: 78px;
+            height: 98px;
+            object-fit: cover;
+        }
+      
+    /* Verification section styles */
+    .code-verify-section{max-width:540px;margin:160px auto;padding:28px;border-radius:12px;background:#fff;direction:rtl;text-align:center;border:1px solid #eef6ff}
+    .code-verify-section h2{margin:0 0 8px;font-size:22px;color:#111;font-weight:700}
+    .code-verify-section p.desc{margin:0 0 18px;color:#6b6b6b}
+    .code-inputs{display:flex;gap:14px;justify-content:center;margin:14px 0 8px}
+    .code-input{width:56px;height:56px;border-radius:8px;border:1px solid #e6e6e6;font-size:26px;text-align:center;outline:none;background:#fafafa}
+    .code-meta{color:#6b6b6b;margin-bottom:14px}
+    .code-actions{
+     display:flex;
+     gap:12px;
+     justify-content:center;
+     margin-top:12px;
+     flex-direction : row-reverse;
+}
+    .btn{padding:10px 22px;border-radius:8px;border:none;cursor:pointer;font-weight:600}
+    .btn-primary{background:#007ee6;color:#fff}
+    .btn-ghost{background:#f0f6ff;color:#1d69a8;border:1px solid #d9ecff}
+    @media (max-width:480px){.code-verify-section{margin:20px 18px;padding:20px}.code-input{width:48px;height:48px}}
+    
+
+/* تنسيقات كارت المتدرب */
+.trainee-section {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.trainee-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 800px;
+    padding: 25px;
+    font-family: 'Cairo', sans-serif;
+}
+
+.info-group {
+    margin-bottom: 25px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+}
+
+.section-title {
+    color: #0056b3;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.info-row {
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.label {
+    color: #777;
+    font-size: 0.9rem;
+}
+
+.value {
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.highlight .value {
+    color: #00a8ff;
+}
+
+.stats-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.stat-box {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #e9ecef;
+}
+
+.stat-value {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #0056b3;
+}
+
+.stat-label {
+    font-size: 0.85rem;
+    color: #666;
+}
+
+.stat-box.time {
+    background: #0056b3;
+}
+.stat-box.time .stat-value, .stat-box.time .stat-label {
+    color: #fff;
+}
+
+/* للموبايل */
+@media (max-width: 600px) {
+    .grid-2 { grid-template-columns: 1fr; }
+    .info-row { gap: 15px; }
+}
+
+        /* Footer */
+.footer { display: flex; flex-direction: column; padding: 64px 5% 32px 5%; background: linear-gradient(180deg, rgba(0, 82, 151, 1) 0%, rgba(0, 53, 97, 1) 100%); color: #ffffff; width: 100%; }
+.container-7 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 48px; margin-bottom: 48px; }
+ .text-wrapper-11 { font-family: "Cairo", Helvetica; font-weight: 400; color: #d4d4d4; font-size: 14px; line-height: 1.6; }
+ .text-wrapper-12 { font-family: "Cairo", Helvetica; font-weight: 600; color: #ffffff; font-size: 16px; margin-bottom: 16px; }
+.link { color: #d4d4d4; font-family: "Cairo", Helvetica; font-size: 16px; margin-bottom: 8px; display: block; transition: color 0.3s ease; }
+.link:hover { color: #ffffff; }
+.element { font-family: "Cairo", Helvetica; font-weight: 400; color: #99a1ae; font-size: 14px; text-align: center; padding-top: 32px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+
+        @media (max-width: 768px) {
+            .macbook-pro .image { width: 60px; height: 75px; }
+            .macbook-pro .container { padding: 6px; }
+            .macbook-pro .div-wrapper, .macbook-pro .div, .macbook-pro .frame-2 { height: 42px; padding: 4px 8px; }
+            .macbook-pro .text-wrapper, .macbook-pro .text-wrapper-2 { font-size: 14px; }
+            .macbook-pro .create-plan { padding: 30px 20px; }
+            .macbook-pro .frame-6 { flex-direction: column; }
+            .macbook-pro .container-3 { min-width: 100%; }
+        }
+
+        @media (max-width: 480px) {
+            .macbook-pro .frame { flex-direction: column; gap: 15px; padding: 15px; }
+            .macbook-pro .container { width: 100%; }
+            .macbook-pro .frame-wrapper { padding: 200px 5% 30px; }
+        }

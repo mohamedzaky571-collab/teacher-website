@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بيانات المعلم </title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="teacher-style.css">
+   
+</head>
+<body>
+
+    <div class="macbook-pro">
+        <div class="frame">
+           <a href="home.html"><img class="image" src="src/image 2.png" alt="Logo" /></a>
+            <div class="container">
+                <a href="home.html" style="flex: 1; text-decoration: none;">
+                    <div class="frame-2"><div class="text-wrapper-2">الرئيسية</div></div>
+                </a>
+                <a href="log-in.html" style="flex: 1; text-decoration: none;">
+                    <div class="div"><div class="text-wrapper">تسجيل الدخول</div></div>
+                </a>
+                <a href="register.html" style="flex: 1; text-decoration: none;">
+                    <div class="div-wrapper"><div class="text-wrapper">سجل الان</div></div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Verification / Code entry section -->
+        <section class="code-verify-section" aria-labelledby="verify-title">
+            <h2 id="verify-title">أدخل الكود</h2>
+            <p class="desc">تم ارسال كود للبريد الالكتروني الخاص بك</p>
+
+            <div class="code-inputs" role="group" aria-label="أربع خانات للكود">
+                <input inputmode="numeric" pattern="[0-9]*" maxlength="1" class="code-input" />
+                <input inputmode="numeric" pattern="[0-9]*" maxlength="1" class="code-input" />
+                <input inputmode="numeric" pattern="[0-9]*" maxlength="1" class="code-input" />
+                <input inputmode="numeric" pattern="[0-9]*" maxlength="1" class="code-input" />
+            </div>
+
+            <div class="code-meta">00:60</div>
+
+            <div class="code-actions">
+                <button type="button" class="btn btn-ghost" id="resendBtn" disabled>إعادة ارسال</button>
+                <button type="button" class="btn btn-primary" id="submitBtn"><a href="result.html">ادخال</a></button>
+            </div>
+            
+            
+        </section>
+
+        <footer class="footer">
+    <div class="container-7">
+        <div>
+            <img src="src/image 1.png" alt="Logo" style="width: 78px; margin-bottom: 16px;"/>
+            <p class="text-wrapper-11">منصة تعليمية متخصصة في تحفيظ القرآن الكريم وتدريس التربية الإسلامية بأحدث الأساليب التعليمية</p>
+        </div>
+        <div>
+            <h3 class="text-wrapper-12">روابط سريعة</h3>
+            <a href="home.html" class="link">الرئيسية</a>
+            <a href="register.html" class="link">سجل الان</a>
+            <a href="log-in.html" class="link">تسجيل الدخول </a>
+        </div>
+        <div>
+            <h3 class="text-wrapper-12">تواصل معنا</h3>
+            <div class="link"><img src="src/phone--.svg" alt="Phone Icon"> +965 1234 5678</div>
+            <p class="link"><img src="src/email.svg" alt="Email Icon"> info@example.com</p>
+            <p class="link"><img src="src/location.svg" alt="Location Icon"> الكويت</p>
+        </div>
+    </div>
+    <p class="element">© 2025 جميع الحقوق محفوظة بالتعاون بين التوجيه الفني العام لمادة التربية الاسلامية ومنصة صاد</p>
+</footer>
+   
+
+        <script>
+        (function(){
+            const inputs = Array.from(document.querySelectorAll('.code-input'));
+            const meta = document.querySelector('.code-meta');
+            const resendBtn = document.getElementById('resendBtn');
+            const submitBtn = document.getElementById('submitBtn');
+            let timer = 60; let interval = null;
+
+            function updateMeta(){
+                const mm = String(Math.floor(timer/60)).padStart(2,'0');
+                const ss = String(timer%60).padStart(2,'0');
+                meta.textContent = `${mm}:${ss}`;
+            }
+
+            function startTimer(){
+                clearInterval(interval);
+                timer = 60; resendBtn.disabled = true; updateMeta();
+                interval = setInterval(()=>{
+                    timer--; if(timer<=0){ clearInterval(interval); resendBtn.disabled = false; updateMeta(); return; }
+                    updateMeta();
+                },1000);
+            }
+
+            // input behavior
+            inputs.forEach((inp, idx)=>{
+                inp.addEventListener('input', (e)=>{
+                    inp.value = inp.value.replace(/[^0-9]/g,'').slice(0,1);
+                    if(inp.value && idx < inputs.length-1) inputs[idx+1].focus();
+                });
+                inp.addEventListener('keydown', (e)=>{
+                    if(e.key === 'Backspace' && !inp.value && idx>0){ inputs[idx-1].focus(); }
+                });
+            });
+
+            resendBtn.addEventListener('click', ()=>{
+                inputs.forEach(i=>i.value=''); inputs[0].focus(); startTimer(); alert('تم ارسال الكود مجددا');
+            });
+
+            submitBtn.addEventListener('click', ()=>{
+                const code = inputs.map(i=>i.value).join('');
+                if(code.length < 4){ alert('الرجاء ادخال الكود المرسل بالكامل'); return; }
+                // here you would verify the code (AJAX/fetch)
+                alert('تم ادخال الكود: ' + code);
+            });
+            
+            // start on load
+            startTimer(); inputs[0].focus();
+        })();
+        </script>
+
+        </body>
+</html>

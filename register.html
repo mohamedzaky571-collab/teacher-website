@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>التسجيل</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-register.css">
+</head>
+<body>
+    <div class="macbook-pro">
+        <div class="frame">
+           <a href="home.html"><img class="image" src="src/image 2.png" alt="Logo" /></a>
+            <div class="container">
+                <a href="home.html" style="flex: 1; text-decoration: none;">
+                    <div class="frame-2"><div class="text-wrapper-2">الرئيسية</div></div>
+                </a>
+                <a href="log-in.html" style="flex: 1; text-decoration: none;">
+                    <div class="div"><div class="text-wrapper-2">تسجيل الدخول</div></div>
+                </a>
+                <a href="register.html" style="flex: 1; text-decoration: none;">
+                    <div class="div-wrapper"><div class="text-wrapper">سجل الان</div></div>
+                </a>
+            </div>
+        </div>
+
+        <div class="frame-wrapper">
+            <form id="registrationForm" class="create-plan" onsubmit="handleSubmit(event)">
+                <div class="frame-3">
+                    <div style="text-align: center;"><p class="Button-container">أكمل التسجيل</p></div>
+                    
+                    <div class="frame-5">
+                        <div class="container-2">
+                            <div class="text-wrapper-4">الرقم المدني *</div>
+                            <div class="input"><input type="text" placeholder="ادخل رقمك المدني" maxlength="12" id="civilId" required /></div>
+                        </div>
+
+                        <div class="container-2">
+                            <div class="text-wrapper-4">الاسم رباعي *</div>
+                            <div class="input-2"><input type="text" placeholder="أدخل أسمك الكامل" id="fullName" required /></div>
+                        </div>
+
+                        <div class="frame-6">
+                            <div class="container-3">
+                                <div class="text-wrapper-4">تاريخ التعيين *</div>
+                                <div class="input-3"><input type="date" id="appointmentDate" required /></div>
+                            </div>
+                            <div class="container-3">
+                                <div class="text-wrapper-4">البريد الالكتروني *</div>
+                                <div class="input-3"><input type="email" placeholder="mohamed@gmail.com" id="email" required /></div>
+                            </div>
+                        </div>
+
+                        <div class="frame-6">
+                            <div class="container-3">
+                                <div class="text-wrapper-4">الهاتف المحمول *</div>
+                                <div class="input-3"><input type="tel" placeholder="+965 (555) 123-4567" id="phone" required /></div>
+                            </div>
+                            <div class="container-3">
+                                <div class="text-wrapper-4">الجنس *</div>
+                                <div class="primitive-button">
+                                    <select id="gender" required>
+                                        <option value="">اختر الجنس</option>
+                                        <option value="male">ذكر</option>
+                                        <option value="female">أنثى</option>
+                                    </select>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="#717182" stroke-width="2"/></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="frame-6">
+                            <div class="container-3">
+                                <div class="text-wrapper-4">المنطقة التعليمية *</div>
+                                <div class="primitive-button">
+                                    <select id="region" required>
+                                        <option value="">اختر المنطقة</option>
+                                        <option value="kuwait">الكويت</option>
+                                        <option value="ahmadi">الأحمدي</option>
+                                        <option value="hawalli">حولي</option>
+                                        <option value="farwaniya">الفروانية</option>
+                                        <option value="jahra">الجهراء</option>
+                                        <option value="mubarak">مبارك الكبير</option>
+                                    </select>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="#717182" stroke-width="2"/></svg>
+                                </div>
+                            </div>
+                            <div class="container-3">
+                                <div class="text-wrapper-4">المسمى الوظيفي *</div>
+                                <div class="primitive-button">
+                                    <select id="jobTitle" required>
+                                        <option value="">اختر المسمى</option>
+                                        <option value="head">رئيس قسم</option>
+                                        <option value="teacher">معلم</option>
+                                        <option value="supervisor">مشرف</option>
+                                    </select>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="#717182" stroke-width="2"/></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="frame-6">
+                            <div class="container-3">
+                                <div class="text-wrapper-4">اختر المدرسة *</div>
+                                <div class="primitive-button">
+                                    <select id="school" required>
+                                        <option value="">اختر المدرسة</option>
+                                        <option value="omar">مدرسة عمر بن الخطاب</option>
+                                        <option value="ali">مدرسة علي بن أبي طالب</option>
+                                        <option value="fatima">مدرسة فاطمة الزهراء</option>
+                                    </select>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="#717182" stroke-width="2"/></svg>
+                                </div>
+                            </div>
+                            <div class="container-3">
+                                <div class="text-wrapper-4">المرحلة التعليمية *</div>
+                                <div class="primitive-button">
+                                    <select id="stage" required>
+                                        <option value="">اختر المرحلة</option>
+                                        <option value="primary">الابتدائية</option>
+                                        <option value="middle">المتوسطة</option>
+                                        <option value="secondary">الثانوية</option>
+                                    </select>
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M4 6L8 10L12 6" stroke="#717182" stroke-width="2"/></svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="frame-7">
+                            <div class="text-wrapper-9">الموافقة على كافة الشروط *</div>
+                            <div class="fluent-checkbox"><input type="checkbox" id="terms" required /></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: center; width: 100%;" class="Button-container">
+                    <button type="submit" class="frame-9"><div class="text-wrapper-2">تسجيل</div></button>
+                    <p class="text-wrapper-10">ملاحظة : هذه البيانات محمية ضمن سياسة الخصوصية في تطبيق صاد</p>
+                </div>
+            </form>
+
+           
+        </div>
+    </div>
+ <footer class="footer">
+    <div class="container-7">
+        <div>
+            <img src="src/image 1.png" alt="Logo" style="width: 78px; margin-bottom: 16px;"/>
+            <p class="text-wrapper-11">منصة تعليمية متخصصة في تحفيظ القرآن الكريم وتدريس التربية الإسلامية بأحدث الأساليب التعليمية</p>
+        </div>
+        <div>
+            <h3 class="text-wrapper-12">روابط سريعة</h3>
+            <a href="home.html" class="link">الرئيسية</a>
+            <a href="register.html" class="link">سجل الان</a>
+            <a href="log-in.html" class="link">تسجيل الدخول </a>
+        </div>
+        <div>
+            <h3 class="text-wrapper-12">تواصل معنا</h3>
+            <div class="link"><img src="src/phone--.svg" alt="Phone Icon"> +965 1234 5678</div>
+            <p class="link"><img src="src/email.svg" alt="Email Icon"> info@example.com</p>
+            <p class="link"><img src="src/location.svg" alt="Location Icon"> الكويت</p>
+        </div>
+    </div>
+    <p class="element">© 2025 جميع الحقوق محفوظة بالتعاون بين التوجيه الفني العام لمادة التربية الاسلامية ومنصة صاد</p>
+</footer>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const formData = {
+                civilId: document.getElementById('civilId').value,
+                fullName: document.getElementById('fullName').value,
+                appointmentDate: document.getElementById('appointmentDate').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                gender: document.getElementById('gender').value,
+                region: document.getElementById('region').value,
+                jobTitle: document.getElementById('jobTitle').value,
+                school: document.getElementById('school').value,
+                stage: document.getElementById('stage').value,
+                terms: document.getElementById('terms').checked
+            };
+            if (!formData.terms) { alert('يجب الموافقة على الشروط والأحكام'); return; }
+            console.log('بيانات التسجيل:', formData);
+            alert('تم التسجيل بنجاح! شكراً لانضمامك إلينا');
+        }
+        document.getElementById('civilId').addEventListener('input', function(e) { this.value = this.value.replace(/[^0-9]/g, ''); });
+        document.getElementById('phone').addEventListener('input', function(e) { this.value = this.value.replace(/[^0-9+()-\s]/g, ''); });
+    </script>
+    <script src="js/active-link.js"></script>
+</body>
+</html>

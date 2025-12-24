@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تسجيل الدخول</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style-log-in.css">
+</head>
+<body>
+    <div class="macbook-pro">
+        <div class="frame">
+           <a href="home.html"><img class="image" src="src/image 2.png" alt="Logo" /></a>
+            <div class="container">
+                <a href="home.html" style="flex: 1; text-decoration: none;">
+                    <div class="frame-2"><div class="text-wrapper-2">الرئيسية</div></div>
+                </a>
+                <a href="log-in.html" style="flex: 1; text-decoration: none;">
+                    <div class="div"><div class="text-wrapper">تسجيل الدخول</div></div>
+                </a>
+                <a href="register.html" style="flex: 1; text-decoration: none;">
+                    <div class="div-wrapper"><div class="text-wrapper">سجل الان</div></div>
+                </a>
+            </div>
+        </div>
+
+        <div class="frame-wrapper">
+            <div class="frame-3">
+                <div class="frame-4">
+                    <div class="frame-5">
+                        <div class="text-wrapper-3">أدخل الرقم المدني</div>
+                        <div class="button">
+                            <input type="text" placeholder="ادخل رقمك المدني" maxlength="12" pattern="[0-9]*" inputmode="numeric" id="civilId" required />
+                        </div>
+                    </div>
+                    <div class="frame-6" onclick="handleLogin()">
+                        <div class="text-wrapper"><a href="teacher-data.html">ادخال</a></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+<footer class="footer">
+    <div class="container-7">
+        <div>
+            <img src="src/image 1.png" alt="Logo" style="width: 78px; margin-bottom: 16px;"/>
+            <p class="text-wrapper-11">منصة تعليمية متخصصة في تحفيظ القرآن الكريم وتدريس التربية الإسلامية بأحدث الأساليب التعليمية</p>
+        </div>
+        <div>
+            <h3 class="text-wrapper-12">روابط سريعة</h3>
+            <a href="home.html" class="link">الرئيسية</a>
+            <a href="register.html" class="link">سجل الان</a>
+            <a href="log-in.html" class="link">تسجيل الدخول </a>
+        </div>
+        <div>
+            <h3 class="text-wrapper-12">تواصل معنا</h3>
+            <div class="link"><img src="src/phone--.svg" alt="Phone Icon"> +965 1234 5678</div>
+            <p class="link"><img src="src/email.svg" alt="Email Icon"> info@example.com</p>
+            <p class="link"><img src="src/location.svg" alt="Location Icon"> الكويت</p>
+        </div>
+    </div>
+    <p class="element">© 2025 جميع الحقوق محفوظة بالتعاون بين التوجيه الفني العام لمادة التربية الاسلامية ومنصة صاد</p>
+</footer>
+    <script>
+        function handleLogin() {
+            const civilIdInput = document.getElementById('civilId');
+            const civilId = civilIdInput.value.trim();
+            if (!civilId) { alert('الرجاء إدخال الرقم المدني'); civilIdInput.focus(); return; }
+            if (civilId.length < 12) { alert('الرجاء إدخال رقم مدني صحيح (12 رقم)'); civilIdInput.focus(); return; }
+            console.log('محاولة تسجيل الدخول برقم:', civilId);
+            alert('تم تسجيل الدخول بنجاح!');
+        }
+        document.getElementById('civilId').addEventListener('keypress', function(e) { if (e.key === 'Enter') handleLogin(); });
+        document.getElementById('civilId').addEventListener('input', function(e) { this.value = this.value.replace(/[^0-9]/g, ''); });
+    </script>
+    <script src="js/active-link.js"></script>
+</body>
+</html>
