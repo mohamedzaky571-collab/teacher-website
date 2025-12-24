@@ -709,7 +709,7 @@
     width: 220px;
     height: 447px;
     scale: 1;
-    left: 106px;
+    left: 84px;
     top: 32px;
 }
             .macbook-pro .container { padding: 6px; }
@@ -810,5 +810,6 @@
             .macbook-pro .img { width: 200px; height: 400px; right: 50%; transform: translateX(50%); }
         }
     
+
 
 
