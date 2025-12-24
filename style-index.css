@@ -260,7 +260,7 @@
             width: 100%;
             min-height: 500px;
             background-color: #ffffff;
-            padding: 40px 16px;
+            padding: 40px 8px;
         }
 
         .macbook-pro .frame-8 {
@@ -810,3 +810,4 @@
             .macbook-pro .img { width: 200px; height: 400px; right: 50%; transform: translateX(50%); }
         }
     
+
